@@ -42,10 +42,15 @@ require("lazy").setup({
 	 	"nvim-telescope/telescope-file-browser.nvim",
 		 commit = "da2a20c",
 	 },
+
 	 "nvim-tree/nvim-web-devicons",
+
+	-- oilnvim
+	"stevearc/oil.nvim",
 
 	-- bufdelete
 	"famiu/bufdelete.nvim",
+
 	-- autopairs
 	{
 		'windwp/nvim-autopairs',
@@ -55,6 +60,7 @@ require("lazy").setup({
 
 	-- autotags
 	'windwp/nvim-ts-autotag',
+
 	-- comment
 	{
 		'numToStr/Comment.nvim',
