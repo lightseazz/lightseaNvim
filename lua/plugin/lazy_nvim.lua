@@ -38,11 +38,11 @@ require("lazy").setup({
 	},
 
 	-- telescope file exlorer
-	{
-		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-	},
-	"nvim-tree/nvim-web-devicons",
+	 {
+	 	"nvim-telescope/telescope-file-browser.nvim",
+		 commit = "da2a20c",
+	 },
+	 "nvim-tree/nvim-web-devicons",
 
 	-- bufdelete
 	"famiu/bufdelete.nvim",
