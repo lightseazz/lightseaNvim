@@ -1,15 +1,16 @@
+---@diagnostic disable-next-line: missing-fields
 require'nvim-treesitter.configs'.setup {
 	-- built-in modules
   ensure_installed = {"lua", "vimdoc", "bash", "typescript", "javascript" },
   sync_install = false,
-  auto_install = true,
+  auto_install = false,
   highlight = {
     enable = true,
   },
 	incremental_selection = {
     enable = true,
     keymaps = {
-			init_selection = '<CR>',
+			init_selection = '<TAB>',
       scope_incremental = '<CR>',
       node_incremental = '<TAB>',
       node_decremental = '<S-TAB>',

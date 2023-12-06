@@ -17,11 +17,18 @@ require("lazy").setup({
 	-- lsp
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
+	{
+		"neovim/nvim-lspconfig",
+	},
+	-- typescript tools (lsp)
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
 
 	-- treesitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	"mfussenegger/nvim-treehopper",
 	"RRethy/nvim-treesitter-endwise",
 
 	-- nvim-cmp
@@ -37,24 +44,21 @@ require("lazy").setup({
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 
-	-- telescope file exlorer
-	 {
-	 	"nvim-telescope/telescope-file-browser.nvim",
-		 commit = "da2a20c",
-	 },
-
-	 "nvim-tree/nvim-web-devicons",
+	"nvim-tree/nvim-web-devicons",
 
 	-- oilnvim
-	"stevearc/oil.nvim",
+	{
+		"stevearc/oil.nvim",
+		version ="2.3.0",
+	},
 
-	-- bufdelete
-	"famiu/bufdelete.nvim",
+	--neodev
+	{ "folke/neodev.nvim", opts = {} },
 
 	-- autopairs
 	{
 		'windwp/nvim-autopairs',
-		event = "InsertEnter",
+		-- event = "InsertEnter",
 		opts = {}
 	},
 
