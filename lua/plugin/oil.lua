@@ -2,7 +2,7 @@ require("oil").setup(
 	{
 		delete_to_trash = true,
 		keymaps = {
-			[","] = "actions.parent",
+			["<Tab>"] = "actions.parent",
 			-- ["<A-l>"] = "actions.select",
 		}
 

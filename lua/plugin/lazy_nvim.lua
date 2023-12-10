@@ -49,7 +49,6 @@ require("lazy").setup({
 	-- oilnvim
 	{
 		"stevearc/oil.nvim",
-		version ="2.3.0",
 	},
 
 	--neodev

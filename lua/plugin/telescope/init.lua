@@ -1,27 +1,37 @@
 require("telescope").setup {
-	pickers = {
-		buffers = {
-			initial_mode = "normal",
-			mappings = {
-				n = {
-					['dd'] = require("telescope.actions").delete_buffer;
-				}
-			}
-		},
-		lsp_references = {
-			initial_mode = "normal",
-		},
-		lsp_workspace_symbols = {
-			initial_mode = "normal",
-		}
-	},
 	defaults = {
 		mappings = {
 			n = {
 				-- ['dd'] = require("telescope.actions").delete_buffer;
 			}
 		}
-	}
+	},
+	pickers = {
+		buffers = {
+			theme = "ivy",
+			initial_mode = "normal",
+			mappings = {
+				n = {
+					['dd'] = require("telescope.actions").delete_buffer,
+				}
+			}
+		},
+		find_files = {
+			theme = "ivy",
+		},
+		live_grep = {
+			theme = "ivy",
+		},
+		lsp_references = {
+			theme = "ivy",
+			initial_mode = "normal",
+		},
+		lsp_workspace_symbols = {
+			-- theme="ivy",
+			initial_mode = "normal",
+		}
+	},
+
 }
 local builtin = require('telescope.builtin')
 

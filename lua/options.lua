@@ -11,7 +11,9 @@ set.ignorecase = true
 -- vim.opt.foldmethod = 'expr'
 -- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 -- vim.opt.foldenable = false
---
+
 -- command abbreviation 
--- use :diff (:w !diff % - ) to show what is modified
-vim.cmd("abb diff w !diff % -")
+vim.cmd("abb diff w !diff % -") --show diff
+vim.cmd("abb m mks! ")
+vim.cmd("abb hp split")
+vim.cmd("abb vp vsplit")
