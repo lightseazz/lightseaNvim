@@ -17,9 +17,9 @@ badd +19 lua/options.lua
 badd +5 lua/keymaps.lua
 argglobal
 %argdel
-edit lua/keymaps.lua
+edit lua/options.lua
 argglobal
-balt lua/options.lua
+balt lua/keymaps.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,12 +30,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 14) / 29)
+let s:l = 13 - ((12 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 039|
+keepjumps 13
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

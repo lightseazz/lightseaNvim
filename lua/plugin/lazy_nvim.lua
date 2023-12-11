@@ -49,10 +49,14 @@ require("lazy").setup({
 	-- oilnvim
 	{
 		"stevearc/oil.nvim",
+		-- version = '*',
 	},
 
 	--neodev
-	{ "folke/neodev.nvim", opts = {} },
+	{
+		"folke/neodev.nvim",
+		opts = {}
+	},
 
 	-- autopairs
 	{

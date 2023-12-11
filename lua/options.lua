@@ -6,6 +6,7 @@ set.shiftwidth = 2
 set.number = true
 set.clipboard = "unnamedplus"
 set.ignorecase = true
+set.relativenumber = true
 
 -- -- folding
 -- vim.opt.foldmethod = 'expr'

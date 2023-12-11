@@ -1,5 +1,6 @@
 require("telescope").setup {
 	defaults = {
+		dynamic_preview_title = true,
 		mappings = {
 			n = {
 				-- ['dd'] = require("telescope.actions").delete_buffer;
