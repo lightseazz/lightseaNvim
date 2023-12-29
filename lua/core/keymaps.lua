@@ -18,6 +18,10 @@ Map("n", "<C-d>", "<C-d>zz")
 Map("n", "<C-u>", "<C-u>zz")
 Map("n", "n", "nzzzv")
 Map("n", "N", "Nzzzv")
+Map("n", "H", "^")
+Map("n", "L", "$")
+Map("x", "p", "P")
+
 
 -- window motion
 Map("n", "<C-h>", "<C-w>h")
@@ -43,7 +47,7 @@ Map("t", "<C-Down>", "<cmd>resize +2<CR>")
 Map("t", "<C-Left>", "<cmd>vertical resize -4<CR>")
 Map("t", "<C-Right>", "<cmd>vertical resize +4<CR>")
 
--- intending  blocks
+-- indent  blocks
 Map("v", "<", "<gv")
 Map("v", ">", ">gv")
 

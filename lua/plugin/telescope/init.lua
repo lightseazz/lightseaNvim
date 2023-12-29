@@ -5,14 +5,14 @@ require("telescope").setup {
 		dynamic_preview_title = true,
 		mappings = {
 			i = {
-				["<C-j>"] = actions.preview_scrolling_up,
-				["<C-k>"] = actions.preview_scrolling_down,
+				["<C-j>"] = actions.preview_scrolling_down,
+				["<C-k>"] = actions.preview_scrolling_up,
 				["<C-h>"] = actions.preview_scrolling_left,
 				["<C-l>"] = actions.preview_scrolling_right,
 			},
 			n = {
-				["<C-j>"] = actions.preview_scrolling_up,
-				["<C-k>"] = actions.preview_scrolling_down,
+				["<C-j>"] = actions.preview_scrolling_down,
+				["<C-k>"] = actions.preview_scrolling_up,
 				["<C-h>"] = actions.preview_scrolling_left,
 				["<C-l>"] = actions.preview_scrolling_right,
 			}
@@ -22,8 +22,8 @@ require("telescope").setup {
 		buffers = {
 			theme = "ivy",
 			initial_mode = "normal",
-			sort_mru=true,
-			ignore_current_buffer=true,
+			sort_mru = true,
+			ignore_current_buffer = true,
 			mappings = {
 				n = {
 					['dd'] = actions.delete_buffer,
@@ -40,8 +40,11 @@ require("telescope").setup {
 			theme = "ivy",
 			initial_mode = "normal",
 		},
-		lsp_workspace_symbols = {
-			-- theme="ivy",
+		current_buffer_fuzzy_find = {
+			theme = "ivy",
+		},
+		registers = {
+			theme = "ivy",
 			initial_mode = "normal",
 		}
 	},
@@ -52,6 +55,8 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>f', builtin.find_files, {})
 vim.keymap.set('n', '<leader>/', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>b', builtin.buffers, {})
+vim.keymap.set('n', '<leader>s', builtin.current_buffer_fuzzy_find, {})
+vim.keymap.set('n', '<leader>p', builtin.registers, {})
 vim.keymap.set('n', '<leader>gh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>gm', builtin.keymaps, {})
 vim.keymap.set('n', 'gr', builtin.lsp_references, {})
-vim.keymap.set('n', 'gs', builtin.lsp_workspace_symbols, {})

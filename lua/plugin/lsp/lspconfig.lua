@@ -10,6 +10,3 @@ lspconfig.lua_ls.setup {
 		},
 	},
 }
-
-
-require("plugin/lspconfig/keymap")
