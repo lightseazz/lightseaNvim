@@ -1,7 +1,7 @@
 ---@diagnostic disable-next-line: missing-fields
 require 'nvim-treesitter.configs'.setup {
 	-- built-in modules
-	ensure_installed = { "lua", "vimdoc", "bash", "typescript", "javascript" },
+	ensure_installed = { "lua", "vimdoc", "bash", "typescript", "javascript", "c_sharp" },
 	sync_install = false,
 	auto_install = false,
 	highlight = {

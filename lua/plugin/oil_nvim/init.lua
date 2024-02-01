@@ -3,9 +3,9 @@ require("oil").setup(
 		delete_to_trash = true,
 		keymaps = {
 			["<Tab>"] = "actions.parent",
-			["<leader>d"] = "actions.close",
+			["<leader>e"] = "actions.close",
 		}
 	}
 )
 
-vim.keymap.set('n', "<leader>d", function() vim.api.nvim_command(":Oil ") end)
+vim.keymap.set('n', "<leader>e", function() vim.api.nvim_command(":Oil ") end)

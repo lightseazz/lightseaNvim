@@ -13,13 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +40 ~/.config/nvim/lua/plugin/telescope/init.lua
-badd +22 lua/plugin/lsp/keymaps.lua
+badd +8 ~/.config/nvim/lua/core/keymaps.lua
+badd +15 ~/.config/nvim/lua/core/options.lua
+badd +23 lua/plugin/telescope/init.lua
+badd +6 lua/plugin/lazy_nvim.lua
+badd +2 lua/plugin/lsp/lspconfig.lua
+badd +0 lua/plugin/nvim_cmp/init.lua
 argglobal
 %argdel
-edit lua/plugin/lsp/keymaps.lua
+edit lua/plugin/nvim_cmp/init.lua
 argglobal
-balt ~/.config/nvim/lua/plugin/telescope/init.lua
+balt lua/plugin/lsp/lspconfig.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,12 +34,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((14 * winheight(0) + 14) / 29)
+let s:l = 55 - ((25 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
-normal! 037|
+keepjumps 55
+normal! 023|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

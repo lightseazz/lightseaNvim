@@ -1,5 +1,6 @@
 local lspconfig = require("lspconfig")
 lspconfig.bashls.setup {}
+lspconfig.omnisharp.setup {}
 lspconfig.lua_ls.setup {
 	settings = {
 		Lua = {

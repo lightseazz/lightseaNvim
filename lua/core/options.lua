@@ -5,12 +5,11 @@ set.shiftwidth = 2
 set.number = true
 set.clipboard = "unnamedplus"
 set.ignorecase = true
-set.relativenumber = true
+
 -- better for wrap
 set.showbreak = "> "
 set.linebreak = true
 set.breakindent = true
 
--- command abbreviation 
-vim.cmd("abb diff w !diff % -") --show diff
-vim.cmd("abb ms mks! ")
+-- command abbreviation
+vim.cmd.cnoreabbrev("m mks!")

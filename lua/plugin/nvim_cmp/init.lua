@@ -55,3 +55,6 @@ require('lspconfig')['bashls'].setup {
 require('lspconfig')['lua_ls'].setup {
 	capabilities = capabilities
 }
+require('lspconfig')['omnisharp'].setup {
+	capabilities = capabilities
+}

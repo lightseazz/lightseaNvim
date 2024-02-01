@@ -17,9 +17,8 @@ require("lazy").setup({
 	-- lsp
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
-	{
-		"neovim/nvim-lspconfig",
-	},
+	"neovim/nvim-lspconfig",
+
 	-- typescript tools (lsp)
 	{
 		"pmizio/typescript-tools.nvim",
@@ -43,7 +42,6 @@ require("lazy").setup({
 	-- telescope
 	{
 		'nvim-telescope/telescope.nvim',
-		commit = "f336f8c",
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 
@@ -63,7 +61,7 @@ require("lazy").setup({
 	-- autopairs
 	{
 		'windwp/nvim-autopairs',
-		-- event = "InsertEnter",
+		event = "InsertEnter",
 		opts = {}
 	},
 
@@ -73,9 +71,9 @@ require("lazy").setup({
 	-- comment
 	{
 		'numToStr/Comment.nvim',
-		lazy = false,
 	},
 
 	-- scheme
 	"rebelot/kanagawa.nvim",
+	priority = 1000,
 })
